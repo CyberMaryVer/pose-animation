@@ -148,6 +148,10 @@ function init() {
       setupAnimation(result, model, 'avatar_laugh');
     });
 
+    bvhLoader.load(path + '/animations/gestures.bvh', (result) => {
+      setupAnimation(result, model, 'avatar_gestures');
+    });
+
     animate();
   });
 
