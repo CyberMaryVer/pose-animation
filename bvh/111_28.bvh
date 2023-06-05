@@ -1,21 +1,21 @@
 HIERARCHY
-ROOT hip
+ROOT Armature_mixamorigHips
 {
   OFFSET 0 0 0
   CHANNELS 6 Xposition Yposition Zposition Zrotation Yrotation Xrotation
-  JOINT abdomen
+  JOINT Armature_mixamorigSpine
   {
     OFFSET 0 20.6881 -0.73152
     CHANNELS 3 Zrotation Xrotation Yrotation
-    JOINT chest
+    JOINT Armature_mixamorigSpine2
     {
       OFFSET 0 11.7043 -0.48768
       CHANNELS 3 Zrotation Xrotation Yrotation
-      JOINT neck
+      JOINT Armature_mixamorigNeck
       {
         OFFSET 0 22.1894 -2.19456
         CHANNELS 3 Zrotation Xrotation Yrotation
-        JOINT head
+        JOINT Armature_mixamorigHead
         {
           OFFSET -0.24384 7.07133 1.2192
           CHANNELS 3 Zrotation Xrotation Yrotation
@@ -43,23 +43,23 @@ ROOT hip
       {
         OFFSET -2.68224 19.2634 -4.8768
         CHANNELS 3 Zrotation Xrotation Yrotation
-        JOINT rShldr
+        JOINT Armature_mixamorigRightShoulder
         {
           OFFSET -8.77824 -1.95073 1.46304
           CHANNELS 3 Zrotation Xrotation Yrotation
-          JOINT rForeArm
+          JOINT Armature_mixamorigRightForeArm
           {
             OFFSET -28.1742 -1.7115 0.48768
             CHANNELS 3 Zrotation Xrotation Yrotation
-            JOINT rHand
+            JOINT Armature_mixamorigRightHand
             {
               OFFSET -22.5879 0.773209 7.07136
               CHANNELS 3 Zrotation Xrotation Yrotation
-              JOINT rThumb1
+              JOINT Armature_mixamorigRightHandThumb1
               {
                 OFFSET -1.2192 -0.487915 3.41376
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT rThumb2
+                JOINT Armature_mixamorigRightHandThumb2
                 {
                   OFFSET -3.37035 -0.52449 3.41376
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -69,11 +69,11 @@ ROOT hip
                   }
                 }
               }
-              JOINT rIndex1
+              JOINT Armature_mixamorigRightHandIndex1
               {
                 OFFSET -7.75947 0.938293 5.60832
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT rIndex2
+                JOINT Armature_mixamorigRightHandIndex2
                 {
                   OFFSET -2.54057 -0.884171 1.56538
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -83,11 +83,11 @@ ROOT hip
                   }
                 }
               }
-              JOINT rMid1
+              JOINT Armature_mixamorigRightHandMiddle1
               {
                 OFFSET -8.24714 1.18213 3.41376
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT rMid2
+                JOINT Armature_mixamorigRightHandMiddle2
                 {
                   OFFSET -3.10165 -0.590103 1.0647
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -97,11 +97,11 @@ ROOT hip
                   }
                 }
               }
-              JOINT rRing1
+              JOINT Armature_mixamorigRightHandRing1
               {
                 OFFSET -8.82822 0.546677 1.51678
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT rRing2
+                JOINT Armature_mixamorigRightHandRing2
                 {
                   OFFSET -2.60934 -0.819778 -0.0198488
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -111,11 +111,11 @@ ROOT hip
                   }
                 }
               }
-              JOINT rPinky1
+              JOINT Armature_mixamorigRightHandPinky1
               {
                 OFFSET -8.27202 -0.0477905 -0.4584
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT rPinky2
+                JOINT Armature_mixamorigRightHandPinky2
                 {
                   OFFSET -1.82734 -0.647385 -0.700984
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -133,23 +133,23 @@ ROOT hip
       {
         OFFSET 2.68224 19.2634 -4.8768
         CHANNELS 3 Zrotation Xrotation Yrotation
-        JOINT lShldr
+        JOINT Armature_mixamorigLeftShoulder
         {
           OFFSET 8.77824 -1.95073 1.46304
           CHANNELS 3 Zrotation Xrotation Yrotation
-          JOINT lForeArm
+          JOINT Armature_mixamorigLeftForeArm
           {
             OFFSET 28.1742 -1.7115 0.48768
             CHANNELS 3 Zrotation Xrotation Yrotation
-            JOINT lHand
+            JOINT Armature_mixamorigLeftHand
             {
               OFFSET 22.5879 0.773209 7.07136
               CHANNELS 3 Zrotation Xrotation Yrotation
-              JOINT lThumb1
+              JOINT Armature_mixamorigLeftHandThumb1
               {
                 OFFSET 1.2192 -0.487915 3.41376
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT lThumb2
+                JOINT Armature_mixamorigLeftHandThumb2
                 {
                   OFFSET 3.37035 -0.52449 3.41376
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -159,11 +159,11 @@ ROOT hip
                   }
                 }
               }
-              JOINT lIndex1
+              JOINT Armature_mixamorigLeftHandIndex1
               {
                 OFFSET 7.75947 0.938293 5.60832
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT lIndex2
+                JOINT Armature_mixamorigLeftHandIndex2
                 {
                   OFFSET 2.54057 -0.884171 1.56538
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -173,11 +173,11 @@ ROOT hip
                   }
                 }
               }
-              JOINT lMid1
+              JOINT Armature_mixamorigLeftHandMiddle1
               {
                 OFFSET 8.24714 1.18213 3.41376
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT lMid2
+                JOINT Armature_mixamorigLeftHandMiddle2
                 {
                   OFFSET 3.10165 -0.590103 1.0647
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -187,11 +187,11 @@ ROOT hip
                   }
                 }
               }
-              JOINT lRing1
+              JOINT Armature_mixamorigLeftHandRing1
               {
                 OFFSET 8.82822 0.546677 1.51678
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT lRing2
+                JOINT Armature_mixamorigLeftHandRing2
                 {
                   OFFSET 2.60934 -0.819778 -0.0198488
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -201,11 +201,11 @@ ROOT hip
                   }
                 }
               }
-              JOINT lPinky1
+              JOINT Armature_mixamorigLeftHandPinky1
               {
                 OFFSET 8.27202 -0.0477905 -0.4584
                 CHANNELS 3 Zrotation Xrotation Yrotation
-                JOINT lPinky2
+                JOINT Armature_mixamorigLeftHandPinky2
                 {
                   OFFSET 1.82734 -0.647385 -0.700984
                   CHANNELS 3 Zrotation Xrotation Yrotation
@@ -221,11 +221,11 @@ ROOT hip
       }
     }
   }
-  JOINT rButtock
+  JOINT Armature_mixamorigRightUpLeg
   {
     OFFSET -8.77824 4.35084 1.2192
     CHANNELS 3 Zrotation Xrotation Yrotation
-    JOINT rThigh
+    JOINT Armature_mixamorigRightLeg
     {
       OFFSET 0 -1.70687 -2.19456
       CHANNELS 3 Zrotation Xrotation Yrotation
@@ -233,7 +233,7 @@ ROOT hip
       {
         OFFSET 0 -36.8199 0.73152
         CHANNELS 3 Zrotation Xrotation Yrotation
-        JOINT rFoot
+        JOINT Armature_mixamorigRightFoot
         {
           OFFSET 0.73152 -45.1104 -5.12064
           CHANNELS 3 Zrotation Xrotation Yrotation
@@ -245,11 +245,11 @@ ROOT hip
       }
     }
   }
-  JOINT lButtock
+  JOINT Armature_mixamorigLeftUpLeg
   {
     OFFSET 8.77824 4.35084 1.2192
     CHANNELS 3 Zrotation Xrotation Yrotation
-    JOINT lThigh
+    JOINT Armature_mixamorigLeftLeg
     {
       OFFSET 0 -1.70687 -2.19456
       CHANNELS 3 Zrotation Xrotation Yrotation
@@ -257,7 +257,7 @@ ROOT hip
       {
         OFFSET 0 -36.8199 0.73152
         CHANNELS 3 Zrotation Xrotation Yrotation
-        JOINT lFoot
+        JOINT Armature_mixamorigLeftFoot
         {
           OFFSET -0.73152 -45.1104 -5.12064
           CHANNELS 3 Zrotation Xrotation Yrotation

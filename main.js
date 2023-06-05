@@ -81,8 +81,16 @@ function init() {
     /* find model's weighted skeleton and give the model a pointer to it */
     if (!model.skeleton) {
       model.traverse((child) => {
+        if (child.isBone) {
+            console.log("Bone Name:", child.name);
+        }
         if (child.skeleton) {
-          model.skeleton = child.skeleton;
+            model.skeleton = child.skeleton;
+
+            // Print all model key names
+            const keys = Object.keys(child.skeleton);
+            console.log("Model Key Names:");
+            console.log(keys);
         }
       });
     }
@@ -124,7 +132,7 @@ function init() {
 
 //  const path = 'https://raw.githubusercontent.com/shootTheLuck/shootTheLuck.github.io/master/assets';
     const path = './assets';
-  const path1 = path + '/models/female.glb'
+  const path1 = path + '/models/anime.glb'
   const path2 = path + '/models/humanoid.glb'
   gltfLoader.load(path2, (gltf) => {
     model = gltf.scene;
