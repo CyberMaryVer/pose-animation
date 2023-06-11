@@ -11,6 +11,13 @@ const openBtn = document.getElementById('openBtn');
 const animBtn = document.getElementById('animBtn');
 const modelBtn = document.getElementById('modelBtn');
 
+
+function traverseBones(object, callback) {
+  object.traverse !== undefined
+    ? object.traverse(callback)
+    : callback(object);
+}
+
 function listAnimation(name) {
   const option = document.createElement('option');
   option.value = name;
@@ -45,8 +52,15 @@ function init() {
 
   const scene = new THREE.Scene();
 
-  const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100000);
-  camera.position.set(0, 30, 160);
+// Add a camera
+  const camera = new THREE.PerspectiveCamera(
+  50,  window.innerWidth / window.innerHeight,  0.1,  100000);
+  camera.position.z = -100;
+  camera.position.x = 10;
+  camera.position.y = -10;
+
+//  const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.1, 100000);
+//  camera.position.set(0, 30, 160);
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.target.set(0, 30, 0);
@@ -55,7 +69,7 @@ function init() {
   controls.enableDamping = true;
 
   const dirLight = new THREE.DirectionalLight(0xffffff);
-  dirLight.position.set(-10, 20, 100);
+  dirLight.position.set(10, -20, -100);
   scene.add(dirLight);
 
   const ambLight = new THREE.AmbientLight(0xffffff, 0.2);
@@ -78,6 +92,7 @@ function init() {
 
     const clip = BVHLoaderResult.clip;
     const skeleton = BVHLoaderResult.skeleton;
+
     /* find model's weighted skeleton and give the model a pointer to it */
     if (!model.skeleton) {
       model.traverse((child) => {
@@ -91,6 +106,7 @@ function init() {
             const keys = Object.keys(child.skeleton);
             console.log("Model Key Names:");
             console.log(keys);
+
         }
       });
     }
@@ -134,9 +150,28 @@ function init() {
     const path = './assets';
   const path1 = path + '/models/anime.glb'
   const path2 = path + '/models/humanoid.glb'
-  gltfLoader.load(path2, (gltf) => {
+  gltfLoader.load(path1, (gltf) => {
     model = gltf.scene;
+    const armature = model.getObjectByName('Armature');
+    const mesh = model.getObjectByName('Mesh');
     scene.add(model);
+    model.scale.set(20, 20, 20); // Increase the scale by a factor of 2
+//    camera.position.set(3, 2, 2); // Move the camera closer to the model
+
+    // Rotate a specific bone
+//    const boneName = 'Armature_mixamorigRightLeg'; // Replace with the desired bone name
+//    let bone;
+//    traverseBones(armature, (child) => {
+//    if (child.isBone && child.name === boneName) {
+//          bone = child;
+//        }
+//      });
+//    if (bone) {
+//        bone.rotation.x += Math.PI / 4; // Example rotation along the X-axis by 45 degrees
+//      }
+
+    // Update the model's pose
+    model.updateMatrixWorld(true);
 
     mixer = new THREE.AnimationMixer(model);
 
